@@ -1,4 +1,0 @@
-
-This is test file , created to study git rm command.
-
-created by kunak yeole
