@@ -9,5 +9,5 @@ jobs:
     uses: kunals-repo/repo1/.github/workflows/python-reusable.yml@main
     with:
       python_version: "3.10"
-      script_path: "app.py"
+      script_path: "kunals-repo/repo1/app.py"
       
