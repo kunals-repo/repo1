@@ -1,0 +1,26 @@
+name: Reusable Python Workflow
+
+on:
+  workflow_call:
+    inputs:
+      python_version:
+        required: true
+        type: string
+      script_path:
+        required: true
+        type: string
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python_version }}
+
+      - name: Run Python Script
+        run: python ${{ inputs.script_path }}
